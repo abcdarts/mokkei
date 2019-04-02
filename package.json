@@ -2,7 +2,7 @@
   "name": "parcel_lp_template",
   "version": "1.0.0",
   "description": "template LP page with parcel",
-  "main": "index.js",
+  "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html --public-url ./",
