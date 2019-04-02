@@ -11,7 +11,9 @@
   "dependencies": {
     "parcel-bundler": "^1.12.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.17.3"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abcdarts/parcel_LP_template.git"
