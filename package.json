@@ -1,0 +1,25 @@
+{
+  "name": "parcel_lp_template",
+  "version": "1.0.0",
+  "description": "template LP page with parcel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abcdarts/parcel_LP_template.git"
+  },
+  "author": "abcdarts",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abcdarts/parcel_LP_template/issues"
+  },
+  "homepage": "https://github.com/abcdarts/parcel_LP_template#readme"
+}
