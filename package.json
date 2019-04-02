@@ -12,7 +12,8 @@
     "parcel-bundler": "^1.12.3"
   },
   "devDependencies": {
-    "sass": "^1.17.3"
+    "sass": "^1.17.3",
+    "typescript": "^3.4.1"
   },
   "repository": {
     "type": "git",
