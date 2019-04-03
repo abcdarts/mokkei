@@ -1,13 +1,13 @@
-# This is Parcel Project Template
+# Parcel template project
 
 ## Usage
 
-development
+develop
 ```text
 npm run dev
 ```
 
-deployment
+deploy
 ```text
 npm run build
 ```
