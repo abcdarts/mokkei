@@ -1,3 +1,212 @@
 body {
-  background: #fff;
+  background: #000;
+}
+
+.lv2_heading {
+    color: #9f273c;
+    font-size: 24px;
+
+    &--belief {
+    font-size: 18px;
+    color: #9f273c;
+
+    span {
+      font-size: 24px;
+      color: #fff;
+      display: inline-block;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+.lv3_heading {
+  font-size: 30px;
+  line-height: 4rem;
+  margin: 0 0 30px;
+}
+
+.header {
+
+  margin: 80px 0 160px;
+  position: relative;
+  height: 47.6%;
+  overflow: hidden;
+
+  &_nav {
+    width: 160px;
+    position: absolute;
+    top: 0;
+    left: 5.7%;
+  }
+
+  &_logo {
+    margin: 0 0 45px;
+    text-align: center;
+  }
+
+  &_movie {
+    float: right;
+    width: 60%;
+    min-width: 850px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .nav_list {
+
+    margin: 0 0 35px;
+
+    &Item {
+      margin: 0 0 15px;
+      a {
+        color: #fff;
+        border-bottom: 2px solid #000;
+        text-decoration: none;
+        font-size: 1.4em;
+        padding: 0 0 3px;
+
+        &:hover {
+          border-bottom: 2px solid #9f273c;
+        }
+      }
+    }
+  }
+
+  .nav_link {
+    text-align: center;
+
+    a {
+      width: 160px;
+      color: #fff;
+      padding: 10px 0;
+      border: 1px solid #fff;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+  
+}
+
+
+.belief {
+  background: url('../img/pc_belief_01.png') no-repeat center top;
+  padding: 70px 0 0;
+  background-size: contain;
+
+  &_inner {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  &_leadText {
+    font-size: 30px;
+    color: #fff;
+    margin: 40px 0 0;
+    line-height: 4rem;
+  }
+
+  &_text {
+    font-size: 15px;
+    color: #fff;
+    margin: 30px 0 0;
+    padding: 0 0 54px;
+    line-height: 2.6rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  &_image {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.ingredients {
+  background: url('../img/pc_bg_01.png') repeat center top;
+  padding: 160px 0;
+  height: 1328px;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  &_inner {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  &_text {
+    font-size: 15px;
+    line-height: 3rem;
+  }
+
+  &_textArea {
+    width: 370px;
+    float: right;
+  }
+
+  &_image {
+    position: absolute;
+
+    &--01 {
+      top: 0;
+      right: 440px;
+    }
+
+    &--02 {
+      top: 450px;
+      right: -70px;
+    }
+
+    &--03 {
+      top: 700px;
+      right: 608px;
+    }
+  }
+}
+
+.experience {
+  background: #000;
+  padding: 160px 0;
+  height: 1328px;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: #fff;
+
+  &_inner {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  &_text {
+    font-size: 15px;
+    line-height: 3rem;
+  }
+
+  &_textArea {
+    width: 370px;
+    float: left;
+  }
+
+  &_image {
+    padding: 642px 0 0;
+    position: absolute;
+    top: 0;
+    left: 440px;
+
+    &Box {
+      display: flex;
+      justify-content: space-between;
+      height: 640px;
+      
+      &Area {
+        width: 540px;
+      }
+    }
+  }
 }

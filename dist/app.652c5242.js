@@ -194,7 +194,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/functions/message.ts":[function(require,module,exports) {
+},{"./../img/pc_belief_01.png":[["pc_belief_01.ff851718.png","img/pc_belief_01.png"],"img/pc_belief_01.png"],"./../img/pc_bg_01.png":[["pc_bg_01.17c940c9.png","img/pc_bg_01.png"],"img/pc_bg_01.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/functions/message.ts":[function(require,module,exports) {
 "use strict";
 
 exports.__esModule = true;
@@ -245,7 +245,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61967" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54471" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -421,4 +421,4 @@ function hmrAcceptRun(bundle, id) {
   }
 }
 },{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/app.ts"], null)
-//# sourceMappingURL=app.652c5242.js.map
+//# sourceMappingURL=/app.652c5242.js.map
