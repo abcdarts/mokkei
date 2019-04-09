@@ -1,7 +1,7 @@
 {
-  "name": "parcel_lp_template",
+  "name": "mokkei",
   "version": "1.0.0",
-  "description": "template LP page with parcel",
+  "description": "mokkei LP",
   "main": "app.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,14 +16,6 @@
     "sass": "^1.17.3",
     "typescript": "^3.4.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abcdarts/parcel_LP_template.git"
-  },
   "author": "abcdarts",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abcdarts/parcel_LP_template/issues"
-  },
-  "homepage": "https://github.com/abcdarts/parcel_LP_template#readme"
+  "license": "ISC"
 }
