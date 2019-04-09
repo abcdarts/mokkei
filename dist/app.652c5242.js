@@ -194,12 +194,12 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/pc_belief_01.png":[["pc_belief_01.ff851718.png","img/pc_belief_01.png"],"img/pc_belief_01.png"],"./../img/pc_bg_01.png":[["pc_bg_01.17c940c9.png","img/pc_bg_01.png"],"img/pc_bg_01.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/style_sp.scss":[function(require,module,exports) {
+},{"./../img/border_02.png":[["border_02.d9d92858.png","img/border_02.png"],"img/border_02.png"],"./../img/border_01.png":[["border_01.a77db9bf.png","img/border_01.png"],"img/border_01.png"],"./../img/pc_belief_01.png":[["pc_belief_01.ff851718.png","img/pc_belief_01.png"],"img/pc_belief_01.png"],"./../img/pc_bg_01.png":[["pc_bg_01.17c940c9.png","img/pc_bg_01.png"],"img/pc_bg_01.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"scss/style_sp.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
+},{"./../img/sp_menu_btn_open.png":[["sp_menu_btn_open.37083ae5.png","img/sp_menu_btn_open.png"],"img/sp_menu_btn_open.png"],"./../img/border_02.png":[["border_02.d9d92858.png","img/border_02.png"],"img/border_02.png"],"./../img/border_01.png":[["border_01.a77db9bf.png","img/border_01.png"],"img/border_01.png"],"./../img/sp_belief_01.png":[["sp_belief_01.2ca017f2.png","img/sp_belief_01.png"],"img/sp_belief_01.png"],"./../img/pc_bg_01.png":[["pc_bg_01.17c940c9.png","img/pc_bg_01.png"],"img/pc_bg_01.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/process/browser.js":[function(require,module,exports) {
 
 // shim for using process in browser
 var process = module.exports = {}; // cached from whatever global is present so that test runners that stub it
@@ -10797,23 +10797,37 @@ require("../scss/style_sp.scss");
 var jquery_1 = __importDefault(require("jquery"));
 
 jquery_1["default"](function () {
-  jquery_1["default"]('#menu_btn').on('click', function () {
+  console.log('jquery');
+  jquery_1["default"]('#menu_btn').on('click', function (e) {
+    e.preventDefault();
     var bodyH = jquery_1["default"]('body').height();
     var scH = jquery_1["default"](window).scrollTop();
 
     if (jquery_1["default"](this).hasClass('is-active')) {
-      jquery_1["default"](this).removeClass('is-active');
-      jquery_1["default"]('.overlay').fadeOut();
+      jquery_1["default"](this).removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+      jquery_1["default"]('.header nav').fadeOut();
     } else {
-      jquery_1["default"]('.overlayMenu').css({
-        'top': scH + 100
+      jquery_1["default"](this).addClass('is-active').find('img').css({
+        'opacity': 0
       });
-      jquery_1["default"]('.overlay').css({
-        'height': bodyH
-      });
-      jquery_1["default"](this).addClass('is-active');
-      jquery_1["default"]('.overlay').fadeIn();
+      jquery_1["default"]('.header nav').fadeIn();
     }
+  });
+  jquery_1["default"]('.nav_listItem a').on('click', function (e) {
+    jquery_1["default"]('#menu_btn').removeClass('is-active').find('img').css({
+      'opacity': 1
+    });
+    e.preventDefault();
+    var speed = 400;
+    var href = jquery_1["default"](this).attr("href");
+    var target = jquery_1["default"](href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    jquery_1["default"]('body,html').animate({
+      scrollTop: position
+    }, speed, 'swing');
+    jquery_1["default"]('.header nav').fadeOut();
   });
 });
 },{"../scss/reset.scss":"scss/reset.scss","../scss/style.scss":"scss/style.scss","../scss/style_sp.scss":"scss/style_sp.scss","jquery":"../node_modules/jquery/dist/jquery.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -10844,7 +10858,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51125" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55542" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

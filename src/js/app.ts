@@ -5,22 +5,35 @@ import '../scss/style_sp.scss'
 import $ from "jquery";
 
 $(function() {
-  $('#menu_btn').on('click', function() {
+  console.log('jquery');
+  $('#menu_btn').on('click', function(e) {
+    e.preventDefault();
     let bodyH = $('body').height();
     let scH = $(window).scrollTop();
 
     if ($(this).hasClass('is-active')) {
-      $(this).removeClass('is-active');
-      $('.overlay').fadeOut();
+      $(this).removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+      $('.header nav').fadeOut();
     } else {
-      $('.overlayMenu').css({
-        'top': scH + 100
+      $(this).addClass('is-active').find('img').css({
+        'opacity': 0
       });
-      $('.overlay').css( {
-        'height': bodyH
-      });
-      $(this).addClass('is-active');
-      $('.overlay').fadeIn();
+      $('.header nav').fadeIn();
     }
   });
-})
+
+  $('.nav_listItem a').on('click', function(e){
+    $('#menu_btn').removeClass('is-active').find('img').css({
+      'opacity': 1
+    });
+    e.preventDefault();
+    var speed = 400;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    $('.header nav').fadeOut();
+  });
+});

@@ -1,11 +1,25 @@
 @media screen and (min-width: 769px) {
+
+  .is-pcview {
+    display: block!important;
+  }
+
+  .is-spview {
+    display: none!important;
+  }
+
   body {
     background: #000;
+  }
+
+  #menu_btn {
+    display: none;
   }
 
   .lv2_heading {
     color: #9f273c;
     font-size: 24px;
+    font-weight: normal;
 
     &--belief {
       font-size: 18px;
@@ -15,22 +29,53 @@
     &--nabe {
       text-align: center;
       margin: 0 auto;
-      padding: 0 10px 5px 10px;
-      display: inline-block;
-      position: relative;
+      padding: 0 10px 50px 10px;
+      display: block;
 
-      &::after {
-        position: absolute;
-        width: 100%;
-        background: #9f273c;
-        bottom: 0;
-        height: 2px;
-        content: '';
+      p {
+        display: inline-block;
+        padding: 0 0 10px;
+        background: url('../img/border_02.png') repeat-x bottom center;
       }
     }
 
     &--menu {
       color: #000;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    &--space {
+      padding: 0 10px 50px 10px;
+      display: block;
+
+      p {
+        display: inline-block;
+        padding: 0 0 10px;
+        background: url('../img/border_02.png') repeat-x bottom center;
+      }
+    }
+
+    &--location {
+      padding: 0 10px 50px 10px;
+      display: block;
+
+      p {
+        display: inline-block;
+        padding: 0 0 10px;
+        background: url('../img/border_02.png') repeat-x bottom center;
+      }
+    }
+
+    &--experience {
+      padding: 0 0 50px 0;
+      display: block;
+
+      p {
+        display: inline-block;
+        padding: 0 0 10px;
+        background: url('../img/border_02.png') repeat-x bottom center;
+      }
     }
 
     span {
@@ -45,6 +90,7 @@
     font-size: 30px;
     line-height: 4rem;
     margin: 0 0 30px;
+    font-weight: normal;
 
     &--nabe {
       text-align: center;
@@ -52,17 +98,23 @@
 
     &--menu {
       text-align: center;
+      width: 103px;
+      margin: 0 auto 65px;
+      padding: 0 0 50px;
+      font-size: 16px;
+      background: url('../img/border_01.png') repeat-x bottom center;
     }
   }
 
   .lv4_heading {
     font-size: 30px;
     line-height: 4.3rem;
-    margin: 0 0 30px;
+    margin: 115px 0 30px;
+    font-weight: normal;
   }
 
   .header {
-    margin: 80px 0 160px;
+    margin: 80px 0 0;
     position: relative;
     height: 47.6%;
     overflow: hidden;
@@ -256,6 +308,7 @@
   .nabe {
     background: url('../img/pc_bg_01.png') repeat center top;
     padding: 160px 0;
+    overflow: hidden;
 
     &_inner {
       width: 1100px;
@@ -268,17 +321,12 @@
       line-height: 4rem;
     }
 
-    // &_text {
-    //   font-size: 15px;
-    //   color: #fff;
-    //   margin: 30px 0 0;
-    //   padding: 0 0 54px;
-    //   line-height: 2.6rem;
-
-    //   span {
-    //     display: block;
-    //   }
-    // }
+    &_text {
+      font-size: 15px;
+      text-align: center;
+      margin: 30px 0 90px;
+      line-height: 2.6rem;
+    }
 
     &_image {
       img {
@@ -330,7 +378,7 @@
   }
 
   .menu {
-    padding: 160px 0;
+    padding: 160px 0 200px;
 
     &_inner {
       &Box {
@@ -338,30 +386,42 @@
         background: url('../img/pc_bg_01.png') repeat center top;
         width: 1100px;
         margin: 0 auto;
-        padding: 150px;
+        padding: 65px 150px;
+        box-sizing: border-box;
       }
     }
     &_list {
       display: flex;
       justify-content: space-between;
-      width: 1100px;
+      width: 870px;
+      margin: 0 auto 65px;
 
       &Item {
         width: 275px;
+        border-left: 1px solid #c9c9c9;
+        padding: 0 0 0 30px;
 
         &Title {
-          font-size: 30px;
+          font-size: 18px;
           display: inline-block;
           position: relative;
+          height: 52px;
+          margin: 0 0 27px;
 
           &::after {
             position: absolute;
-            width: 100px;
+            width: 20px;
             background: #000;
-            top: 100px;
+            bottom: 0;
+            left: 0;
             height: 2px;
             content: '';
           }
+        }
+
+        .note {
+          margin: 30px 0 0;
+          font-size: 12px;
         }
 
         ul {
@@ -369,17 +429,26 @@
 
           li {
             list-style: none;
-            font-size: 15px;
+            font-size: 14px;
+            margin: 0 0 23px;
           }
         }
+      }
+    }
+
+    &_innerLink {
+      text-align: center;
+      a {
+        color: #000;
+        font-size: 18px;
       }
     }
   }
 
 
   .space {
-    padding: 160px 0;
-    height: 1328px;
+    padding: 0;
+    height: 1510px;
     overflow: hidden;
     box-sizing: border-box;
 
@@ -396,7 +465,7 @@
     }
 
     &_textArea {
-      padding: 700px 0 0;
+      padding: 790px 0 200px;
       width: 370px;
       float: right;
       color: #fff;
@@ -411,13 +480,13 @@
       }
 
       &--02 {
-        top: 350px;
-        right: 440px;
+        top: 544px;
+        right: 550px;
       }
 
       &--03 {
-        top: 800px;
-        right: 500px;
+        top: 998px;
+        right: 454px;
       }
     }
   }
@@ -425,6 +494,7 @@
   .location {
     background: url('../img/pc_bg_01.png') repeat center top;
     padding: 160px 0;
+    position: relative;
 
     &_inner {
       position: relative;
@@ -432,22 +502,63 @@
       margin: 0 auto;
     }
 
-    &_text {
-      font-size: 15px;
+    &_address {
+      font-size: 13px;
       line-height: 3rem;
+      margin: 0 0 30px;
     }
 
-    &_textArea {
-      width: 600px;
+    &_detail {
+      font-size: 13px;
+      line-height: 3rem;
+      margin: 0 0 20px;
+    }
+
+    &_linkBtn {
+      text-align: center;
+      border: 1px solid #000;
+      width: 320px;
+      margin: 0 0 15px;
+
+      a {
+        width: 320px;
+        padding: 20px 0;
+        display: block;
+        color: #000;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+
+    &_note {
+      font-size: 13px;
+      margin: 0 0 65px;
+    }
+
+    &_link {
+      a {
+        font-size: 13px;
+        color: #000;
+      }
+    }
+
+    &_map {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      iframe {
+        filter: grayscale(100%);
+      }
     }
 
   }
 
   .copyright {
-    font-size: 15px;
+    font-size: 12px;
     text-align: center;
     color: #fff;
-    padding: 20px;
+    padding: 25px 0;
   }
 
 }
