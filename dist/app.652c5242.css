@@ -64,6 +64,21 @@ blockquote, q {
   }
   .lv2_heading--nabe {
     text-align: center;
+    margin: 0 auto;
+    padding: 0 10px 5px 10px;
+    display: inline-block;
+    position: relative;
+  }
+  .lv2_heading--nabe::after {
+    position: absolute;
+    width: 100%;
+    background: #9f273c;
+    bottom: 0;
+    height: 2px;
+    content: "";
+  }
+  .lv2_heading--menu {
+    color: #000;
   }
   .lv2_heading span {
     font-size: 24px;
@@ -78,6 +93,9 @@ blockquote, q {
     margin: 0 0 30px;
   }
   .lv3_heading--nabe {
+    text-align: center;
+  }
+  .lv3_heading--menu {
     text-align: center;
   }
 
@@ -294,6 +312,107 @@ blockquote, q {
   .nabe_innernormalText {
     font-size: 15px;
     line-height: 3rem;
+  }
+
+  .menu {
+    padding: 160px 0;
+  }
+  .menu_innerBox {
+    border-top: 5px solid #9f273c;
+    background: url("/pc_bg_01.17c940c9.png") repeat center top;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 150px;
+  }
+  .menu_list {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+  }
+  .menu_listItem {
+    width: 275px;
+  }
+  .menu_listItemTitle {
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+  }
+  .menu_listItemTitle::after {
+    position: absolute;
+    width: 100px;
+    background: #000;
+    top: 100px;
+    height: 2px;
+    content: "";
+  }
+  .menu_listItem ul {
+    list-style: none;
+  }
+  .menu_listItem ul li {
+    list-style: none;
+    font-size: 15px;
+  }
+
+  .space {
+    padding: 160px 0;
+    height: 1328px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .space_inner {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .space_text {
+    font-size: 15px;
+    line-height: 3rem;
+    color: #fff;
+  }
+  .space_textArea {
+    padding: 700px 0 0;
+    width: 370px;
+    float: right;
+    color: #fff;
+  }
+  .space_image {
+    position: absolute;
+  }
+  .space_image--01 {
+    top: 0;
+    right: -70px;
+  }
+  .space_image--02 {
+    top: 350px;
+    right: 440px;
+  }
+  .space_image--03 {
+    top: 800px;
+    right: 500px;
+  }
+
+  .location {
+    background: url("/pc_bg_01.17c940c9.png") repeat center top;
+    padding: 160px 0;
+  }
+  .location_inner {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+  }
+  .location_text {
+    font-size: 15px;
+    line-height: 3rem;
+  }
+  .location_textArea {
+    width: 600px;
+  }
+
+  .copyright {
+    font-size: 15px;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
   }
 }
 @media screen and (max-width: 768px) {
