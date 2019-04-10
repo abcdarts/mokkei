@@ -5,7 +5,6 @@ import '../scss/style_sp.scss'
 import $ from "jquery";
 
 $(function() {
-  console.log('jquery');
   $('#menu_btn').on('click', function(e) {
     e.preventDefault();
     let bodyH = $('body').height();
@@ -36,4 +35,17 @@ $(function() {
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     $('.header nav').fadeOut();
   });
+
+  $('.menu_listItemTitle').on('click', function(){
+    console.log($(this).next('ul'))
+    if($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      $(this).next('ul').slideUp();
+      $(this).find('.accordion_icon').text('＋')
+    } else {
+      $(this).addClass('is-active');
+      $(this).next('ul').slideDown();
+      $(this).find('.accordion_icon').text('ー')
+    }
+  })
 });

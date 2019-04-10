@@ -261,12 +261,18 @@
 
     nav {
       display: none;
-    }
-
-    .nav_list {
       position: fixed;
       top: 60px;
       right: 0;
+      z-index: 100;
+      background: #000;
+      width: 80%;
+    }
+
+    .nav_list {
+      // position: fixed;
+      // top: 60px;
+      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px 0;
@@ -291,9 +297,9 @@
 
     .nav_link {
       text-align: center;
-      position: fixed;
-      top: 380px;
-      right: 0;
+      // position: fixed;
+      // top: 380px;
+      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px 0;
@@ -315,9 +321,9 @@
     }
 
     .nav_text {
-      position: fixed;
-      top: 450px;
-      right: 0;
+      // position: fixed;
+      // top: 450px;
+      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px;
@@ -328,9 +334,9 @@
     }
 
     .nav_detail {
-      position: fixed;
-      top: 520px;
-      right: 0;
+      // position: fixed;
+      // top: 520px;
+      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px;
@@ -534,24 +540,32 @@
 
         &Title {
           font-size: 18px;
-          display: inline-block;
+          display: block;
           position: relative;
           padding: 20px;
+
+          .accordion_icon {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+            color: #aaa;
+            font-size: 20px;
+          }
         }
 
         .note {
-          margin: 30px 0 0;
+          margin: 15px 0 0;
           font-size: 12px;
         }
 
         ul {
           list-style: none;
+          display: none;
 
           li {
             list-style: none;
             font-size: 14px;
-            margin: 0 0 23px;
-            display: none;
+            padding: 10px 20px;
           }
         }
       }

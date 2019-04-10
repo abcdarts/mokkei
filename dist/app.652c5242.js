@@ -10797,7 +10797,6 @@ require("../scss/style_sp.scss");
 var jquery_1 = __importDefault(require("jquery"));
 
 jquery_1["default"](function () {
-  console.log('jquery');
   jquery_1["default"]('#menu_btn').on('click', function (e) {
     e.preventDefault();
     var bodyH = jquery_1["default"]('body').height();
@@ -10829,6 +10828,19 @@ jquery_1["default"](function () {
     }, speed, 'swing');
     jquery_1["default"]('.header nav').fadeOut();
   });
+  jquery_1["default"]('.menu_listItemTitle').on('click', function () {
+    console.log(jquery_1["default"](this).next('ul'));
+
+    if (jquery_1["default"](this).hasClass('is-active')) {
+      jquery_1["default"](this).removeClass('is-active');
+      jquery_1["default"](this).next('ul').slideUp();
+      jquery_1["default"](this).find('.accordion_icon').text('＋');
+    } else {
+      jquery_1["default"](this).addClass('is-active');
+      jquery_1["default"](this).next('ul').slideDown();
+      jquery_1["default"](this).find('.accordion_icon').text('ー');
+    }
+  });
 });
 },{"../scss/reset.scss":"scss/reset.scss","../scss/style.scss":"scss/style.scss","../scss/style_sp.scss":"scss/style_sp.scss","jquery":"../node_modules/jquery/dist/jquery.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -10858,7 +10870,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55542" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56041" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

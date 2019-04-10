@@ -723,11 +723,14 @@ blockquote, q {
   }
   .header nav {
     display: none;
-  }
-  .header .nav_list {
     position: fixed;
     top: 60px;
     right: 0;
+    z-index: 100;
+    background: #000;
+    width: 80%;
+  }
+  .header .nav_list {
     background: #000;
     width: 80%;
     padding: 20px 0;
@@ -747,9 +750,6 @@ blockquote, q {
   }
   .header .nav_link {
     text-align: center;
-    position: fixed;
-    top: 380px;
-    right: 0;
     background: #000;
     width: 80%;
     padding: 20px 0;
@@ -768,9 +768,6 @@ blockquote, q {
     text-align: center;
   }
   .header .nav_text {
-    position: fixed;
-    top: 450px;
-    right: 0;
     background: #000;
     width: 80%;
     padding: 20px;
@@ -780,9 +777,6 @@ blockquote, q {
     line-height: 2.6rem;
   }
   .header .nav_detail {
-    position: fixed;
-    top: 520px;
-    right: 0;
     background: #000;
     width: 80%;
     padding: 20px;
@@ -935,22 +929,29 @@ blockquote, q {
   }
   .menu_listItemTitle {
     font-size: 18px;
-    display: inline-block;
+    display: block;
     position: relative;
     padding: 20px;
   }
+  .menu_listItemTitle .accordion_icon {
+    position: absolute;
+    top: 19px;
+    right: 10px;
+    color: #aaa;
+    font-size: 20px;
+  }
   .menu_listItem .note {
-    margin: 30px 0 0;
+    margin: 15px 0 0;
     font-size: 12px;
   }
   .menu_listItem ul {
     list-style: none;
+    display: none;
   }
   .menu_listItem ul li {
     list-style: none;
     font-size: 14px;
-    margin: 0 0 23px;
-    display: none;
+    padding: 10px 20px;
   }
   .menu_innerLink {
     text-align: center;
