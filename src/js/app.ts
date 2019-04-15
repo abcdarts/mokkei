@@ -70,7 +70,8 @@ $(function() {
       });
       $('.header nav').css({
         'overflow-y': 'visible',
-        'height': winH - 60,
+        'height': 'auto',
+        'display': 'block',
         'opacity': 1
       });
     }
