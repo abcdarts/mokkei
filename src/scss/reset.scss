@@ -28,18 +28,12 @@ time, mark, audio, video {
     background:transparent;
 }
 
-@font-face {
-    font-family: '源ノ明朝';
-    src: url('../font/SourceHanSerif-Regular.woff') format('woff'), url('../font/SourceHanSerif-Regular.otf') format('opentype');
-}
-
 html {
   font-size:62.5%;
 }
 body {
     line-height:1;
-    // font-family:"Yu Mincho", "游明朝 Medium", YuMincho, "游明朝体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
-    font-family: '源ノ明朝' "Yu Mincho", YuMincho, serif;
+    font-family:"Yu Mincho", "游明朝 Medium", YuMincho, "游明朝体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
     font-size:1.3rem;
 }
 

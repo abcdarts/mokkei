@@ -136,6 +136,15 @@
 
 @media screen and (max-width: 768px) {
 
+  @font-face {
+    font-family: '源ノ明朝';
+    src: url('../font/SourceHanSerif-Regular.woff') format('woff'), url('../font/SourceHanSerif-Regular.otf') format('opentype');
+  }
+
+  body {
+    font-family: '源ノ明朝' "Yu Mincho", YuMincho, serif;
+  }
+
   .is-pcview {
     display: none!important;
   }
