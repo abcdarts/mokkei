@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -33,7 +32,7 @@ html {
 
 body {
   line-height: 1;
-  font-family: "Yu Mincho", "游明朝 Medium", YuMincho, "游明朝体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  font-family: "Yu Mincho", YuMincho, sans-serif;
   font-size: 1.3rem;
 }
 
@@ -64,6 +63,10 @@ blockquote, q {
 
   #menu_btn {
     display: none;
+  }
+
+  img {
+    vertical-align: bottom;
   }
 
   .lv2_heading {
@@ -109,6 +112,15 @@ blockquote, q {
     padding: 0 0 10px;
     background: url("/border_02.d9d92858.png") repeat-x bottom center;
   }
+  .lv2_heading--ingredients {
+    padding: 25px 0 40px 0;
+    display: block;
+  }
+  .lv2_heading--ingredients p {
+    display: inline-block;
+    padding: 0 0 10px;
+    background: url("/border_02.d9d92858.png") repeat-x bottom center;
+  }
   .lv2_heading--experience {
     padding: 0 0 50px 0;
     display: block;
@@ -142,6 +154,9 @@ blockquote, q {
     font-size: 16px;
     background: url("/border_01.a77db9bf.png") repeat-x bottom center;
   }
+  .lv3_heading span {
+    display: block;
+  }
 
   .lv4_heading {
     font-size: 30px;
@@ -149,20 +164,25 @@ blockquote, q {
     margin: 115px 0 30px;
     font-weight: normal;
   }
+  .lv4_heading span {
+    display: block;
+  }
 
   .header {
-    margin: 80px 0 0;
+    margin: 80px 0 160px;
     position: relative;
-    height: 47.6%;
     overflow: hidden;
-    height: 667px;
     box-sizing: border-box;
+  }
+  .header_inner {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
   .header_nav {
     width: 160px;
-    position: absolute;
-    top: 0;
-    left: 5.7%;
+    padding: 0 10px;
   }
   .header_logo {
     margin: 0 0 45px;
@@ -189,7 +209,7 @@ blockquote, q {
     color: #fff;
     border-bottom: 2px solid #000;
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 14px;
     padding: 0 0 3px;
   }
   .header .nav_listItem a:hover {
@@ -206,28 +226,34 @@ blockquote, q {
     display: inline-block;
     text-decoration: none;
   }
+  .header .nav_link a:hover {
+    color: #000;
+    background: #fff;
+  }
 
   .belief {
     background: url("/pc_belief_01.ff851718.png") no-repeat center top;
-    padding: 70px 0 0;
     background-size: contain;
   }
   .belief_inner {
     width: 1100px;
+    height: 566px;
     margin: 0 auto;
+    padding: 80px 0 0;
+    box-sizing: border-box;
   }
   .belief_leadText {
     font-size: 30px;
     color: #fff;
     margin: 40px 0 0;
-    line-height: 4rem;
+    line-height: 4.6rem;
   }
   .belief_text {
     font-size: 15px;
     color: #fff;
     margin: 30px 0 0;
     padding: 0 0 54px;
-    line-height: 2.6rem;
+    line-height: 3rem;
   }
   .belief_text span {
     display: block;
@@ -291,13 +317,13 @@ blockquote, q {
     line-height: 3rem;
   }
   .experience_textArea {
-    width: 370px;
+    width: 300px;
     float: left;
   }
   .experience_image {
     position: absolute;
     top: 0;
-    left: 440px;
+    right: -150px;
   }
   .experience_imageBox {
     display: flex;
@@ -496,6 +522,10 @@ blockquote, q {
     text-decoration: none;
     font-size: 18px;
   }
+  .location_linkBtn a:hover {
+    color: #fff;
+    background: #000;
+  }
   .location_note {
     font-size: 13px;
     margin: 0 0 65px;
@@ -538,25 +568,28 @@ blockquote, q {
   }
 
   .main_movie.is-spview {
+    padding: 60px 0 0;
     display: block !important;
   }
 
   .header {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     box-sizing: border-box;
     height: auto;
     margin: 0;
     padding: 10.9px;
     height: 60px;
+    background: #000;
+    z-index: 100;
   }
   .header_logo.is-pcview {
     display: none !important;
   }
   .header_logo.is-spview {
     display: block !important;
-    margin: 0;
-    padding: 5px 10px;
+    margin: -5px 0 0;
+    padding: 0px 10px;
     text-align: center;
     float: left;
     position: fixed;
@@ -574,6 +607,56 @@ blockquote, q {
   }
   .header_movie.is-pcview {
     display: none !important;
+  }
+
+  nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 100;
+    background: #000;
+    width: 30%;
+  }
+
+  .nav_list {
+    background: #000;
+    padding: 20px 0;
+    z-index: 100;
+  }
+  .nav_listItem a {
+    color: #fff;
+    border-bottom: 2px solid #000;
+    text-decoration: none;
+    font-size: 1.4em;
+    padding: 15px 20px !important;
+    display: block;
+    font-size: 16px;
+  }
+  .nav_listItem a:hover {
+    border-bottom: 2px solid #9f273c;
+  }
+
+  .nav_link {
+    text-align: center;
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    color: #fff;
+    margin: 0 auto;
+  }
+  .nav_link a {
+    width: 87%;
+    color: #fff;
+    padding: 10px 0;
+    border: 1px solid #fff;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .belief {
+    background-size: auto;
   }
 
   .nav_text {
@@ -596,6 +679,7 @@ blockquote, q {
   img {
     width: 100%;
     height: auto;
+    vertical-align: bottom;
   }
 
   body {
@@ -604,6 +688,7 @@ blockquote, q {
 
   .main_movie.is-spview {
     display: block !important;
+    margin: 0 0 55px;
   }
   .main_movie.is-spview video {
     width: 100%;
@@ -611,11 +696,11 @@ blockquote, q {
 
   .lv2_heading {
     color: #9f273c;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: normal;
   }
   .lv2_heading--belief {
-    font-size: 18px;
+    font-size: 12px;
     color: #9f273c;
   }
   .lv2_heading--nabe {
@@ -641,6 +726,7 @@ blockquote, q {
   }
   .lv2_heading--space p {
     display: inline-block;
+    font-size: 18px;
     padding: 0 0 10px;
     background: url("/border_02.d9d92858.png") repeat-x bottom center;
   }
@@ -653,13 +739,23 @@ blockquote, q {
     padding: 0 0 10px;
     background: url("/border_02.d9d92858.png") repeat-x bottom center;
   }
+  .lv2_heading--ingredients {
+    padding: 0 0 22px;
+    display: block;
+  }
+  .lv2_heading--ingredients p {
+    display: inline-block;
+    padding: 0 0 10px;
+    background: url("/border_02.d9d92858.png") repeat-x bottom center;
+  }
   .lv2_heading--experience {
-    padding: 0 0 50px 0;
+    padding: 0 0 25px 0;
     display: block;
   }
   .lv2_heading--experience p {
     display: inline-block;
     padding: 0 0 10px;
+    font-size: 17px;
     background: url("/border_02.d9d92858.png") repeat-x bottom center;
   }
   .lv2_heading span {
@@ -671,7 +767,7 @@ blockquote, q {
 
   .lv3_heading {
     font-size: 19px;
-    line-height: 4rem;
+    line-height: 2.8rem;
     margin: 0 0 15px;
     font-weight: normal;
   }
@@ -693,15 +789,23 @@ blockquote, q {
   .lv4_heading {
     font-size: 19px;
     line-height: 3rem;
-    margin: 10px 0 30px;
+    margin: 15px 0 20px;
     font-weight: normal;
   }
 
   .header {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     box-sizing: border-box;
     height: 60px;
+    background: #000;
+    z-index: 100;
+    width: 100%;
+    background: #000;
+  }
+  .header_inner {
+    width: 100%;
+    margin: 0 auto;
   }
   .header_logo {
     margin: -5px 0 0 !important;
@@ -724,7 +828,7 @@ blockquote, q {
   .header nav {
     display: none;
     position: fixed;
-    top: 60px;
+    top: 59px;
     right: 0;
     z-index: 100;
     background: #000;
@@ -732,7 +836,7 @@ blockquote, q {
   }
   .header .nav_list {
     background: #000;
-    width: 80%;
+    width: 100%;
     padding: 20px 0;
     z-index: 100;
   }
@@ -789,7 +893,7 @@ blockquote, q {
 
   .belief {
     background: url("/sp_belief_01.2ca017f2.png") no-repeat center top;
-    padding: 70px 0 0;
+    padding: 12% 0 0;
     background-size: contain;
   }
   .belief_inner {
@@ -797,20 +901,23 @@ blockquote, q {
     margin: 0 auto;
   }
   .belief_leadText {
-    font-size: 15px;
+    font-size: 4vw;
     color: #fff;
-    margin: 40px 0 0;
+    margin: 11% 0 0;
     line-height: 2.4rem;
   }
+  .belief_leadText span {
+    display: block;
+  }
   .belief_text {
-    font-size: 11px;
+    font-size: 2.9vw;
     color: #fff;
-    margin: 30px 0 0;
-    padding: 0 0 3.6%;
-    line-height: 2.6rem;
+    margin: 15px 0 0;
+    padding: 0 0 7.9%;
+    line-height: 2rem;
   }
   .belief_text span {
-    display: block;
+    display: inline;
   }
   .belief_image img {
     width: 100%;
@@ -829,15 +936,11 @@ blockquote, q {
   }
   .ingredients_text {
     font-size: 14px;
-    line-height: 3rem;
+    line-height: 2.4rem;
+    margin: 0 0 20px;
   }
-  .ingredients_image--01 {
-    top: 0;
-    right: 440px;
-  }
-  .ingredients_image--02 {
-    top: 450px;
-    right: -70px;
+  .ingredients_image {
+    margin: 0 0 5px;
   }
 
   .experience {
@@ -851,15 +954,13 @@ blockquote, q {
     position: relative;
     width: 96%;
     margin: 0 auto 5px;
-    height: 640px;
   }
   .experience_text {
     font-size: 14px;
-    line-height: 3rem;
+    line-height: 2.4rem;
   }
   .experience_textArea {
-    width: 370px;
-    float: left;
+    margin: 0 0 17px;
   }
   .experience_imageBox {
     display: flex;
@@ -868,12 +969,12 @@ blockquote, q {
     width: 96%;
   }
   .experience_imageBoxArea {
-    width: 48%;
+    width: 49.5%;
   }
 
   .nabe {
     background: url("/pc_bg_01.17c940c9.png") repeat center top;
-    padding: 45px 0;
+    padding: 40px 0;
     overflow: hidden;
   }
   .nabe_inner {
@@ -891,12 +992,15 @@ blockquote, q {
     margin: 20px 0 45px;
     line-height: 2.6rem;
   }
+  .nabe_text span {
+    display: block;
+  }
   .nabe_image img {
     width: 100%;
   }
   .nabe_innerBox {
     position: relative;
-    margin: 0 auto 20px;
+    margin: 0 auto 35px;
   }
   .nabe_innerBox:last-child {
     margin: 0 auto;
@@ -906,7 +1010,7 @@ blockquote, q {
   }
   .nabe_innernormalText {
     font-size: 15px;
-    line-height: 3rem;
+    line-height: 2.4rem;
   }
 
   .menu {
@@ -947,6 +1051,7 @@ blockquote, q {
   .menu_listItem ul {
     list-style: none;
     display: none;
+    margin: 0 0 20px;
   }
   .menu_listItem ul li {
     list-style: none;
@@ -955,10 +1060,11 @@ blockquote, q {
   }
   .menu_innerLink {
     text-align: center;
+    padding: 0 0 10px;
   }
   .menu_innerLink a {
     color: #000;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .space {
@@ -972,9 +1078,13 @@ blockquote, q {
     margin: 0 auto;
   }
   .space_text {
-    font-size: 15px;
-    line-height: 3rem;
+    font-size: 14px;
+    line-height: 2.4rem;
     color: #fff;
+    margin: 0 0 20px;
+  }
+  .space_textArea {
+    margin: 0 0 10px;
   }
   .space_imageBox {
     display: flex;
@@ -1000,12 +1110,12 @@ blockquote, q {
   }
   .location_address {
     font-size: 13px;
-    line-height: 3rem;
+    line-height: 2.4rem;
     margin: 0 0 20px;
   }
   .location_detail {
     font-size: 13px;
-    line-height: 3rem;
+    line-height: 2.4rem;
     margin: 0 0 20px;
   }
   .location_linkBtn {

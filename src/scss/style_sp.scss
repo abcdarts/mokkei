@@ -19,19 +19,21 @@
 
   .main_movie {
     &.is-spview {
+      padding: 60px 0 0;
       display: block!important;
     }
   }
 
   .header {
-
-    position: relative;
+    position: fixed;
     overflow: hidden;
     box-sizing: border-box;
     height: auto;
     margin: 0;
     padding: 10.9px;
     height: 60px;
+    background: #000;
+    z-index: 100;
 
     &_logo {
 
@@ -41,8 +43,8 @@
 
       &.is-spview {
         display: block!important;
-        margin: 0;
-        padding: 5px 10px;
+        margin: -5px 0 0;
+        padding: 0px 10px;
         text-align: center;
         float: left;
         position: fixed;
@@ -68,13 +70,60 @@
     }
   }
 
-  // .nav_list {
-  //   display: none!important;
-  // }
+  nav {
+    display: none;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 100;
+    background: #000;
+    width: 30%;
+  }
 
-  // .nav_link {
-  //   display: none!important;
-  // }
+  .nav_list {
+    background: #000;
+    padding: 20px 0;
+    z-index: 100;
+
+    &Item {
+      a {
+        color: #fff;
+        border-bottom: 2px solid #000;
+        text-decoration: none;
+        font-size: 1.4em;
+        padding: 15px 20px!important;
+        display: block;
+        font-size: 16px;
+
+        &:hover {
+          border-bottom: 2px solid #9f273c;
+        }
+      }
+    }
+  }
+
+  .nav_link {
+    text-align: center;
+    background: #000;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 100;
+    color: #fff;
+    margin: 0 auto;
+
+    a {
+      width: 87%;
+      color: #fff;
+      padding: 10px 0;
+      border: 1px solid #fff;
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
+
+  .belief {
+    background-size: auto;
+  }
 
   .nav_text {
     display: none!important;
@@ -98,27 +147,17 @@
   img {
     width: 100%;
     height: auto;
+    vertical-align: bottom;
   }
 
   body {
     background: #000;
   }
 
-  // #menu_btn {
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   background: #000;
-  //   padding: 10.9px;
-
-  //   img {
-  //     width: 42px;
-  //   }
-  // }
-
   .main_movie {
     &.is-spview {
       display: block!important;
+      margin: 0 0 55px;
 
       video {
         width: 100%;
@@ -128,11 +167,11 @@
 
   .lv2_heading {
     color: #9f273c;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: normal;
 
     &--belief {
-      font-size: 18px;
+      font-size: 12px;
       color: #9f273c;
     }
 
@@ -162,6 +201,7 @@
 
       p {
         display: inline-block;
+        font-size: 18px;
         padding: 0 0 10px;
         background: url('../img/border_02.png') repeat-x bottom center;
       }
@@ -178,13 +218,25 @@
       }
     }
 
-    &--experience {
-      padding: 0 0 50px 0;
+    &--ingredients {
+      padding: 0 0 22px;
       display: block;
 
       p {
         display: inline-block;
         padding: 0 0 10px;
+        background: url('../img/border_02.png') repeat-x bottom center;
+      }
+    }
+
+    &--experience {
+      padding: 0 0 25px 0;
+      display: block;
+
+      p {
+        display: inline-block;
+        padding: 0 0 10px;
+        font-size: 17px;
         background: url('../img/border_02.png') repeat-x bottom center;
       }
     }
@@ -199,7 +251,7 @@
 
   .lv3_heading {
     font-size: 19px;
-    line-height: 4rem;
+    line-height: 2.8rem;
     margin: 0 0 15px;
     font-weight: normal;
 
@@ -224,15 +276,24 @@
   .lv4_heading {
     font-size: 19px;
     line-height: 3rem;
-    margin: 10px 0 30px;
+    margin: 15px 0 20px;
     font-weight: normal;
   }
 
   .header {
-    position: relative;
+    position: fixed;
     overflow: hidden;
     box-sizing: border-box;
     height: 60px;
+    background: #000;
+    z-index: 100;
+    width: 100%;
+    background: #000;
+
+    &_inner {
+      width: 100%;
+      margin: 0 auto;
+    }
 
     &_nav {
     }
@@ -262,7 +323,7 @@
     nav {
       display: none;
       position: fixed;
-      top: 60px;
+      top: 59px;
       right: 0;
       z-index: 100;
       background: #000;
@@ -270,11 +331,8 @@
     }
 
     .nav_list {
-      // position: fixed;
-      // top: 60px;
-      // right: 0;
       background: #000;
-      width: 80%;
+      width: 100%;
       padding: 20px 0;
       z-index: 100;
 
@@ -297,9 +355,6 @@
 
     .nav_link {
       text-align: center;
-      // position: fixed;
-      // top: 380px;
-      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px 0;
@@ -321,9 +376,6 @@
     }
 
     .nav_text {
-      // position: fixed;
-      // top: 450px;
-      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px;
@@ -334,9 +386,6 @@
     }
 
     .nav_detail {
-      // position: fixed;
-      // top: 520px;
-      // right: 0;
       background: #000;
       width: 80%;
       padding: 20px;
@@ -352,7 +401,7 @@
 
   .belief {
     background: url('../img/sp_belief_01.png') no-repeat center top;
-    padding: 70px 0 0;
+    padding: 12% 0 0;
     background-size: contain;
 
     &_inner {
@@ -361,21 +410,25 @@
     }
 
     &_leadText {
-      font-size: 15px;
+      font-size: 4vw;
       color: #fff;
-      margin: 40px 0 0;
+      margin: 11% 0 0;
       line-height: 2.4rem;
-    }
-
-    &_text {
-      font-size: 11px;
-      color: #fff;
-      margin: 30px 0 0;
-      padding: 0 0 3.6%;
-      line-height: 2.6rem;
 
       span {
         display: block;
+      }
+    }
+
+    &_text {
+      font-size: 2.9vw;
+      color: #fff;
+      margin: 15px 0 0;
+      padding: 0 0 7.9%;
+      line-height: 2rem;
+
+      span {
+        display: inline;
       }
     }
 
@@ -400,24 +453,15 @@
 
     &_text {
       font-size: 14px;
-      line-height: 3rem;
+      line-height: 2.4rem;
+      margin: 0 0 20px;
     }
 
     &_textArea {
     }
 
     &_image {
-
-      &--01 {
-        top: 0;
-        right: 440px;
-      }
-
-      &--02 {
-        top: 450px;
-        right: -70px;
-      }
-
+      margin: 0 0 5px;
     }
   }
 
@@ -432,17 +476,15 @@
       position: relative;
       width: 96%;
       margin: 0 auto 5px;
-      height: 640px;
     }
 
     &_text {
       font-size: 14px;
-      line-height: 3rem;
+      line-height: 2.4rem;
     }
 
     &_textArea {
-      width: 370px;
-      float: left;
+      margin: 0 0 17px;
     }
 
     &_image {
@@ -453,7 +495,7 @@
         width: 96%;
         
         &Area {
-          width: 48%;
+          width: 49.5%;
         }
       }
     }
@@ -462,7 +504,7 @@
 
   .nabe {
     background: url('../img/pc_bg_01.png') repeat center top;
-    padding: 45px 0;
+    padding: 40px 0;
     overflow: hidden;
 
     &_inner {
@@ -481,6 +523,10 @@
       text-align: center;
       margin: 20px 0 45px;
       line-height: 2.6rem;
+
+      span {
+        display: block;
+      }
     }
 
     &_image {
@@ -491,7 +537,7 @@
 
     &_innerBox {
       position: relative;
-      margin: 0 auto 20px;
+      margin: 0 auto 35px;
 
       &:last-child {
         margin: 0 auto;
@@ -513,7 +559,7 @@
 
     &_innernormalText {
       font-size: 15px;
-      line-height: 3rem;
+      line-height: 2.4rem;
     }
   }
 
@@ -561,6 +607,7 @@
         ul {
           list-style: none;
           display: none;
+          margin: 0 0 20px;
 
           li {
             list-style: none;
@@ -573,9 +620,11 @@
 
     &_innerLink {
       text-align: center;
+      padding: 0 0 10px;
+
       a {
         color: #000;
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }
@@ -593,12 +642,14 @@
     }
 
     &_text {
-      font-size: 15px;
-      line-height: 3rem;
+      font-size: 14px;
+      line-height: 2.4rem;
       color: #fff;
+      margin: 0 0 20px;
     }
 
     &_textArea {
+      margin: 0 0 10px;
     }
 
     &_imageBox {
@@ -630,13 +681,13 @@
 
     &_address {
       font-size: 13px;
-      line-height: 3rem;
+      line-height: 2.4rem;
       margin: 0 0 20px;
     }
 
     &_detail {
       font-size: 13px;
-      line-height: 3rem;
+      line-height: 2.4rem;
       margin: 0 0 20px;
     }
 

@@ -4,54 +4,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
   <title>炭火焼鳥 木鶏 Mokkei</title>
 </head>
 <body>
   <header class="header">
-    <div class="header_nav">
-      <h1 class="header_logo is-pcview"><img src="./img/pc_logo.png" alt="炭火焼鳥 木鶏 Mokkei"></h1>
-      <h1 class="header_logo is-spview"><img src="./img/sp_logo.png" alt="炭火焼鳥 木鶏 Mokkei"></h1>
-      <div id="menu_btn">
-        <img src="./img/sp_menu_btn_close.png" alt="">
-      </div>
-      <nav>
-        <ul class="nav_list">
-          <li class="nav_listItem"><a href="#belief">木鶏の信念</a></li>
-          <li class="nav_listItem"><a href="#ingredients">素材</a></li>
-          <li class="nav_listItem"><a href="#experience">焼き方</a></li>
-          <li class="nav_listItem"><a href="#nabe">鍋</a></li>
-          <li class="nav_listItem"><a href="#menu">お品書き</a></li>
-          <li class="nav_listItem"><a href="#space">店舗情報</a></li>
-        </ul>
-        <div class="nav_link">
-          <a href="https://mokkei.owst.jp/" target="_blank">ネット予約はこちら</a>
+    <div class="header_inner">
+      <div class="header_nav">
+        <h1 class="header_logo is-pcview"><img src="./img/pc_logo.png" alt="炭火焼鳥 木鶏 Mokkei"></h1>
+        <h1 class="header_logo is-spview"><img src="./img/sp_logo.png" alt="炭火焼鳥 木鶏 Mokkei"></h1>
+        <div id="menu_btn">
+          <img src="./img/sp_menu_btn_close.png" alt="">
         </div>
-        <p class="nav_text is-spview">
-            大阪府大阪市中央区東心斎橋1-8-14<br>
-            オーブナテビルB1
-        </p>
-        <p class="nav_detail is-spview">
-          営業時間 :<br>
-          月~土、祝日、祝前日:17:00~翌0:00<br>
-          料理、ドリンクL.O. 23:00<br>
-          定休日 : 日曜日<br>
-          TEL : 06-6227-8192
-        </p>
-      </nav>
-    </div>
-    <div class="header_movie is-pcview">
-      <!-- <video src="./movie/mokkei.mp4" width="1100" height="667" autoplay poster="./img/pc_dummy_movie.png"> -->
-      <video src="./movie/mokkei.mp4" width="1100" autoplay>
-        <source src="./movie/mokkei.mp4" type="video/mp4">
-        <source src="./movie/mokkei.webm" type="video/webm">
-      </video>
+        <nav>
+          <ul class="nav_list">
+            <li class="nav_listItem"><a href="#belief">木鶏の信念</a></li>
+            <li class="nav_listItem"><a href="#ingredients">素材</a></li>
+            <li class="nav_listItem"><a href="#experience">焼き方</a></li>
+            <li class="nav_listItem"><a href="#nabe">鍋</a></li>
+            <li class="nav_listItem"><a href="#menu">お品書き</a></li>
+            <li class="nav_listItem"><a href="#space">店舗情報</a></li>
+          </ul>
+          <div class="nav_link">
+            <a href="https://mokkei.owst.jp/" target="_blank">ネット予約はこちら</a>
+          </div>
+          <p class="nav_text is-spview">
+              大阪府大阪市中央区東心斎橋1-8-14<br>
+              オーブナテビルB1
+          </p>
+          <p class="nav_detail is-spview">
+            営業時間 :<br>
+            月~土、祝日、祝前日:17:00~翌0:00<br>
+            料理、ドリンクL.O. 23:00<br>
+            定休日 : 日曜日<br>
+            TEL : 06-6227-8192
+          </p>
+        </nav>
+      </div>
+      <div class="header_movie is-pcview">
+        <!-- <video src="./movie/mokkei.mp4" width="1100" height="667" autoplay poster="./img/pc_dummy_movie.png"> -->
+        <video src="./movie/mokkei.mp4" width="1100" autoplay loop muted>
+          <source src="./movie/mokkei.mp4" type="video/mp4">
+          <source src="./movie/mokkei.webm" type="video/webm">
+        </video>
+      </div>
     </div>
     <!-- <p class="header_movie is-pcview"><img src="./img/pc_dummy_movie.png" alt=""></p> -->
   </header>
 
   <div class="main_movie is-spview">
       <!-- <video src="./movie/mokkei.mp4" width="1100" height="667" autoplay poster="./img/pc_dummy_movie.png"> -->
-      <video src="./movie/mokkei.mp4" width="1100" autoplay>
+      <video src="./movie/mokkei.mp4" width="1100" autoplay loop muted>
         <source src="./movie/mokkei.mp4" type="video/mp4">
         <source src="./movie/mokkei.webm" type="video/webm">
       </video>
@@ -61,7 +64,7 @@
     <div class="belief_inner">
       <h2 class="lv2_heading lv2_heading--belief"><span>木鶏の信念</span>belief</h2>
       <p class="belief_leadText">
-        『最幸』の鶏料理で、お客様に感動を。<br>
+        <span>『最幸』の鶏料理で、</span>お客様に感動を。<br>
         素材、串打ち、焼き、<br>
         18年の経験を基に一切の妥協なく。
       </p>
@@ -81,9 +84,11 @@
   <section id="ingredients" class="ingredients">
     <div class="ingredients_inner">
       <div class="ingredients_textArea">
-        <h2 class="lv2_heading">ingredients</h2>
+        <h2 class="lv2_heading lv2_heading--ingredients">
+          <p>ingredients</p>
+        </h2>
         <p class="lv3_heading">
-          炭職人仕上げの最高級<br>
+          <span>炭職人仕上げの最高級</span>
           「紀州備長炭」
         </p>
         <p class="ingredients_text">
@@ -109,7 +114,7 @@
         </h2>
         <p class="lv3_heading">
           鶏一筋18年<br>
-          一串に込めた<br>
+          <span>一串に込めた</span>
           焼き鶏への想い
         </p>
         <p class="experience_text">
@@ -135,15 +140,15 @@
       </h2>
       <h3 class="lv3_heading lv3_heading--nabe">鶏料理への熱い想いを幅広く</h3>
       <p class="nabe_text">
-          店主自らが炊く鶏ガラスープは野菜と鶏がぎっしりと溶け込んだ<br>
+          <span>店主自らが炊く鶏ガラスープは</span>野菜と鶏がぎっしりと溶け込んだ<br>
           濃厚でありがならもあっさりとした味わい。<br>
-          焼師18年のこだわりもスープまで実感出来る作品です。
+          <span>焼師18年のこだわりもスープまで</span>実感出来る作品です。
       </p>
       <div class="nabe_innerBox">
         <p class="nabe_innerImage nabe_innerImage--left is-pcview"><img src="./img/pc_nabe_01.png" alt=""></p>
         <p class="nabe_innerImage nabe_innerImage--left is-spview"><img src="./img/sp_nabe_01.png" alt=""></p>
         <div class="nabe_innerText nabe_innerText--right">
-          <h4 class="lv4_heading">贅沢な程に<br>味わい深い『水炊き』</h4>
+          <h4 class="lv4_heading"><span>贅沢な程に</span>味わい深い『水炊き』</h4>
           <p class="nabe_innernormalText">強い火力で4時間も炊いた濃厚なスープ。<br>自慢の鶏肉をさっぱりとした自家製のポン酢でお召し上がりください。</p>
         </div>
       </div>
@@ -179,7 +184,7 @@
             </ul>
           </div>
           <div class="menu_listItem">
-            <p class="menu_listItemTitle">鍋<span class="accordion_icon is-spview">＋</span></p>
+            <p class="menu_listItemTitle">鍋<span class="accordion_icon is-spview">＋</span></p>
             <ul>
               <li>鶏 水炊き</li>
               <li>鶏 すき焼</li>

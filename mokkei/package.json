@@ -1,0 +1,21 @@
+{
+  "name": "mokkei",
+  "version": "1.0.0",
+  "description": "mokkei LP",
+  "main": "app.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html",
+    "build": "rm dist/* ; parcel build src/index.html --public-url ./"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "parcel-bundler": "^1.12.3"
+  },
+  "devDependencies": {
+    "sass": "^1.17.3",
+    "typescript": "^3.4.1"
+  },
+  "author": "abcdarts",
+  "license": "ISC"
+}

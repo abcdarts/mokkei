@@ -10815,10 +10815,14 @@ jquery_1["default"](function () {
     }
   });
   jquery_1["default"]('.nav_listItem a').on('click', function (e) {
-    jquery_1["default"]('#menu_btn').removeClass('is-active').find('img').css({
-      'opacity': 1
-    });
     e.preventDefault();
+
+    if (jquery_1["default"](window).width < 1100) {
+      jquery_1["default"]('#menu_btn').removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+    }
+
     var speed = 400;
     var href = jquery_1["default"](this).attr("href");
     var target = jquery_1["default"](href == "#" || href == "" ? 'html' : href);
@@ -10826,11 +10830,12 @@ jquery_1["default"](function () {
     jquery_1["default"]('body,html').animate({
       scrollTop: position
     }, speed, 'swing');
-    jquery_1["default"]('.header nav').fadeOut();
+
+    if (jquery_1["default"](window).width < 1100) {
+      jquery_1["default"]('.header nav').fadeOut();
+    }
   });
   jquery_1["default"]('.menu_listItemTitle').on('click', function () {
-    console.log(jquery_1["default"](this).next('ul'));
-
     if (jquery_1["default"](this).hasClass('is-active')) {
       jquery_1["default"](this).removeClass('is-active');
       jquery_1["default"](this).next('ul').slideUp();
@@ -10870,7 +10875,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56041" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51293" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
