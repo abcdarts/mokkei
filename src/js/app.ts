@@ -5,25 +5,34 @@ import '../scss/style_sp.scss'
 import $ from 'jquery';
 
 $(function() {
-  $('#menu_btn').on('click', function(e) {
+  $('#menu_btn').on('click touch', function(e) {
     e.preventDefault();
     let bodyH = $('body').height();
+    let winH = $(window).height();
     let scH = $(window).scrollTop();
 
     if ($(this).hasClass('is-active')) {
       $(this).removeClass('is-active').find('img').css({
         'opacity': 1
       });
+      $('.header nav').css({
+        'overflow-y': 'hidden',
+        'height': winH - 60
+      });
       $('.header nav').fadeOut();
     } else {
       $(this).addClass('is-active').find('img').css({
         'opacity': 0
       });
+      $('.header nav').css({
+        'overflow-y': 'scroll',
+        'height': winH - 60
+      });
       $('.header nav').fadeIn();
     }
   });
 
-  $('.nav_listItem a').on('click', function(e){
+  $('.nav_listItem a').on('click touch', function(e){
     e.preventDefault();
     if($(window).width < 1100) {
       $('#menu_btn').removeClass('is-active').find('img').css({
@@ -40,7 +49,7 @@ $(function() {
     }
   });
 
-  $('.menu_listItemTitle').on('click', function(){
+  $('.menu_listItemTitle').on('click touch', function(){
     if($(this).hasClass('is-active')) {
       $(this).removeClass('is-active');
       $(this).next('ul').slideUp();
