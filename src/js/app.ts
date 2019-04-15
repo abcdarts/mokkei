@@ -59,5 +59,20 @@ $(function() {
       $(this).next('ul').slideDown();
       $(this).find('.accordion_icon').text('ー')
     }
-  })
+  });
+
+  $(window).on('resize', function(){
+    let winW = $(window).width();
+    let winH = $(window).height();
+    if(winW > 768) {
+      $(this).removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+      $('.header nav').css({
+        'overflow-y': 'visible',
+        'height': winH - 60,
+        'opacity': 1
+      });
+    }
+  });
 });
