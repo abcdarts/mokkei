@@ -26,7 +26,6 @@
 
   .header {
     position: fixed;
-    overflow: hidden;
     box-sizing: border-box;
     height: auto;
     margin: 0;
@@ -291,7 +290,6 @@
 
   .header {
     position: fixed;
-    overflow: hidden;
     box-sizing: border-box;
     height: 60px;
     background: #000;
@@ -365,7 +363,7 @@
     .nav_link {
       text-align: center;
       background: #000;
-      width: 80%;
+      width: 100%;
       padding: 20px 0;
       z-index: 100;
       color: #fff;
@@ -386,7 +384,7 @@
 
     .nav_text {
       background: #000;
-      width: 80%;
+      width: 100%;
       padding: 20px;
       z-index: 100;
       color: #fff;
