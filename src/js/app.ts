@@ -30,19 +30,17 @@ $(function() {
 
   $('.nav_listItem a').on('click touch', function(e){
     e.preventDefault();
-    if($(window).width < 1100) {
-      $('#menu_btn').removeClass('is-active').find('img').css({
-        'opacity': 1
-      });
-    }
     var speed = 400;
     var href= $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
     var position = target.offset().top;
     $('body,html').animate({scrollTop:position}, speed, 'swing');
-    if($(window).width < 1100) {
-      $('.header nav').fadeOut();
-    }
+    $('#menu_btn').removeClass('is-active').find('img').css({
+      'opacity': 1
+    });
+    $('.header nav').css({
+      'display': 'none'
+    });
   });
 
   $('.menu_listItemTitle').on('click touch', function(){
