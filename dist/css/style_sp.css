@@ -26,6 +26,12 @@
     background: #000;
   }
 
+  .wrapper {
+    height: 100vh;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  
   #menu_btn {
     position: absolute;
     top: 0;
