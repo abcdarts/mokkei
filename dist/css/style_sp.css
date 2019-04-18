@@ -5,7 +5,7 @@
     src: url("../font/SourceHanSerif-Regular.woff") format("woff"), url("../font/SourceHanSerif-Regular.otf") format("opentype");
   }
   body {
-    font-family: "源ノ明朝" "Yu Mincho", YuMincho, serif;
+    font-family: "源ノ明朝", "Yu Mincho", YuMincho, serif;
   }
 
   .is-pcview {
