@@ -31,7 +31,7 @@
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   #menu_btn {
     position: absolute;
     top: 0;
@@ -51,6 +51,7 @@
   .main_movie.is-spview {
     display: block !important;
     margin: 0 0 55px;
+    padding: 60px 0 0
   }
   .main_movie.is-spview video {
     width: 100%;
