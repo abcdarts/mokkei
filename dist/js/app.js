@@ -24,10 +24,11 @@ $(function() {
 
   $('.nav_listItem a').on('click touch', function(e){
     e.preventDefault();
-    var speed = 400;
-    var href= $(this).attr("href");
-    var target = $(href == "#" || href == "" ? 'html' : href);
-    var position = target.offset().top;
+    const speed = 400;
+    const href= $(this).attr("href");
+    const target = $(href == "#" || href == "" ? 'html' : href);
+    const position = target.offset().top;
+    console.log(position)
     $('body,html').animate({scrollTop:position}, speed, 'swing');
     $('#menu_btn').removeClass('is-active').find('img').css({
       'opacity': 1
