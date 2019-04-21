@@ -230,9 +230,6 @@
     display: inline-block;
     text-decoration: none;
   }
-  .header .nav_detail {
-    text-align: center;
-  }
   .header .nav_text {
     background: #000;
     width: 100%;
@@ -244,7 +241,7 @@
   }
   .header .nav_detail {
     background: #000;
-    width: 80%;
+    width: 100%;
     padding: 20px;
     z-index: 100;
     color: #fff;
