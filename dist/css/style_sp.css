@@ -480,6 +480,10 @@
   .location_detail a {
     color: #000;
   }
+  .location_detail a:active, .location_detail a:visited {
+    color: #000;
+  }
+
   .location_linkBtn {
     text-align: center;
     border: 1px solid #000;
