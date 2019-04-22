@@ -24,6 +24,9 @@ $(function() {
 
   $('.nav_listItem a').on('click touch', function(e){
     e.preventDefault();
+    // $('.wrapper').css({
+    //   'overflow': 'auto'
+    // });
     $('#menu_btn').removeClass('is-active').find('img').css({
       'opacity': 1
     });
@@ -34,7 +37,11 @@ $(function() {
     const href= $(this).attr("href");
     const target = $(href == "#" || href == "" ? 'html' : href);
     const position = target.offset().top;
-    $('body,html').animate({scrollTop:position + 60}, speed, 'swing');
+    $('body,html').animate({scrollTop:position - 60}, speed, 'swing', function(){
+      // $('.wrapper').css({
+      //   'overflow': 'scroll'
+      // });
+    });
   });
 
   // $('.nav_listItem a').on('click touch', function(e){
