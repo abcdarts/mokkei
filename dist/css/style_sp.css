@@ -27,8 +27,8 @@
   }
 
   .wrapper {
-    height: 100vh;
-    overflow: scroll;
+    height: calc(100vh + 1);
+    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
 

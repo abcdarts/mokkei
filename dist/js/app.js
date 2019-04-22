@@ -28,17 +28,16 @@ $(function() {
     const href= $(this).attr("href");
     const target = $(href == "#" || href == "" ? 'html' : href);
     const position = target.offset().top;
-    console.log(target)
-    console.log(position)
-    $('body,html').animate({
-      scrollTop:position
-    }, speed, 'swing', function() {
-      $('#menu_btn').removeClass('is-active').find('img').css({
-        'opacity': 1
-      });
-      $('.header nav').css({
-        'display': 'none'
-      });
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+  });
+
+  $('.nav_listItem a').on('click touch', function(e){
+    e.preventDefault();
+    $('#menu_btn').removeClass('is-active').find('img').css({
+      'opacity': 1
+    });
+    $('.header nav').css({
+      'display': 'none'
     });
   });
 
