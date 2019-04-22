@@ -24,6 +24,12 @@ $(function() {
 
   $('.nav_listItem a').on('click touch', function(e){
     e.preventDefault();
+    $('#menu_btn').removeClass('is-active').find('img').css({
+      'opacity': 1
+    });
+    $('.header nav').css({
+      'display': 'none'
+    });
     const speed = 400;
     const href= $(this).attr("href");
     const target = $(href == "#" || href == "" ? 'html' : href);
@@ -31,15 +37,15 @@ $(function() {
     $('body,html').animate({scrollTop:position + 60}, speed, 'swing');
   });
 
-  $('.nav_listItem a').on('click touch', function(e){
-    e.preventDefault();
-    $('#menu_btn').removeClass('is-active').find('img').css({
-      'opacity': 1
-    });
-    $('.header nav').css({
-      'display': 'none'
-    });
-  });
+  // $('.nav_listItem a').on('click touch', function(e){
+  //   e.preventDefault();
+  //   $('#menu_btn').removeClass('is-active').find('img').css({
+  //     'opacity': 1
+  //   });
+  //   $('.header nav').css({
+  //     'display': 'none'
+  //   });
+  // });
 
   $('.menu_listItemTitle').on('click touch', function(){
     if($(this).hasClass('is-active')) {
