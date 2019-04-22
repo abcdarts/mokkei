@@ -28,7 +28,7 @@ $(function() {
     const href= $(this).attr("href");
     const target = $(href == "#" || href == "" ? 'html' : href);
     const position = target.offset().top;
-    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    $('body,html').animate({scrollTop:position + 60}, speed, 'swing');
   });
 
   $('.nav_listItem a').on('click touch', function(e){
