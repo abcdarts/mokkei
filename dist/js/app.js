@@ -53,19 +53,19 @@ $(function() {
     }
   });
 
-  // $(window).on('resize', function(){
-  //   let winW = $(window).width();
-  //   let winH = $(window).height();
-  //   if(winW > 1100) {
-  //     $(this).removeClass('is-active').find('img').css({
-  //       'opacity': 1
-  //     });
-  //     $('.header nav').css({
-  //       'overflow-y': 'visible',
-  //       'height': 'auto',
-  //       'display': 'block',
-  //       'opacity': 1
-  //     });
-  //   }
-  // });
+  $(window).on('resize', function(){
+    let winW = $(window).width();
+    let winH = $(window).height();
+    if(winW > 768) {
+      $(this).removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+      $('.header nav').css({
+        'overflow-y': 'visible',
+        'height': 'auto',
+        'display': 'block',
+        'opacity': 1
+      });
+    }
+  });
 });
