@@ -477,6 +477,9 @@
     line-height: 2.4rem;
     margin: 0 0 20px;
   }
+  .location_detail a {
+    color: #000;
+  }
   .location_linkBtn {
     text-align: center;
     border: 1px solid #000;
