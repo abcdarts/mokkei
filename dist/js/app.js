@@ -63,14 +63,21 @@ $(function() {
     let winW = $(window).width();
     let winH = $(window).height();
     if(winW > 768) {
-      $(this).removeClass('is-active').find('img').css({
-        'opacity': 1
-      });
       $('.header nav').css({
         'overflow-y': 'visible',
         'height': 'auto',
         'display': 'block',
         'opacity': 1
+      });
+    } else {
+      $('#menu_btn').removeClass('is-active').find('img').css({
+        'opacity': 1
+      });
+      $('.header nav').css({
+        'overflow-y': 'visible',
+        'height': 'auto',
+        'display': 'none',
+        'opacity': 0
       });
     }
   });
