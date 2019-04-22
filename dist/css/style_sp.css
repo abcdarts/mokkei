@@ -195,7 +195,7 @@
     width: 80%;
     position: absolute;
     overflow-y: scroll;
-    height: calc(100vh - 60px);
+    padding-top: 1px;
   }
   .header .nav_list {
     background: #000;
