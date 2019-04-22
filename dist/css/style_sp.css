@@ -27,7 +27,7 @@
   }
 
   .wrapper {
-    height: calc(100vh + 1);
+    height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }
@@ -195,6 +195,7 @@
     width: 80%;
     position: absolute;
     overflow-y: scroll;
+    height: 100vh;
   }
   .header .nav_list {
     background: #000;
