@@ -7,17 +7,17 @@ $(function() {
       $(this).removeClass('is-active').find('img').css({
         'opacity': 1
       });
-      $('.header nav').css({
-        'height': winH - 60
-      });
+      // $('.header nav').css({
+      //   'height': winH - 60
+      // });
       $('.header nav').fadeOut();
     } else {
       $(this).addClass('is-active').find('img').css({
         'opacity': 0
       });
-      $('.header nav').css({
-        'height': winH - 60
-      });
+      // $('.header nav').css({
+      //   'height': winH - 60
+      // });
       $('.header nav').fadeIn();
     }
   });
