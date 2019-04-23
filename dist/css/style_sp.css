@@ -491,7 +491,7 @@
     margin: 0 auto 15px;
   }
   .location_linkBtn a {
-    width: 320px;
+    width: 100%;
     padding: 20px 0;
     display: block;
     color: #000;
