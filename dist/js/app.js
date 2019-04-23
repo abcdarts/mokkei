@@ -8,7 +8,8 @@ $(function() {
         'opacity': 1
       });
       $('.header nav').css({
-        'height': winH - 60,
+        'height': 'auto',
+        'overflow-y': 'visible',
         'opacity': 0
       });
       $('.header nav').fadeOut();
@@ -18,6 +19,7 @@ $(function() {
       });
       $('.header nav').css({
         'height': winH - 60,
+        'overflow-y': 'scroll',
         'opacity': 1
       });
       $('.header nav').fadeIn();
@@ -27,15 +29,6 @@ $(function() {
   $('.nav_listItem a').on('click touch', function(e){
     let winW = $(window).width();
     e.preventDefault();
-    // $('.wrapper').css({
-    //   'overflow': 'auto'
-    // });
-    // $('#menu_btn').removeClass('is-active').find('img').css({
-    //   'opacity': 1
-    // });
-    // $('.header nav').css({
-    //   'display': 'none'
-    // });
     if(winW <= 768) {
       $('#menu_btn').click();
     }
@@ -46,31 +39,8 @@ $(function() {
     $('body,html').animate({scrollTop:position - 60}, speed, 'swing');
   });
 
-  // $('.nav_listItem a').on('click touch', function(e){
-  //   e.preventDefault();
-  //   $('#menu_btn').removeClass('is-active').find('img').css({
-  //     'opacity': 1
-  //   });
-  //   $('.header nav').css({
-  //     'display': 'none'
-  //   });
-  // });
-
-  $('.menu_listItemTitle').on('click touch', function(){
-    if($(this).hasClass('is-active')) {
-      $(this).removeClass('is-active');
-      $(this).next('ul').slideUp();
-      $(this).find('.accordion_icon').text('＋')
-    } else {
-      $(this).addClass('is-active');
-      $(this).next('ul').slideDown();
-      $(this).find('.accordion_icon').text('ー')
-    }
-  });
-
   $(window).on('resize', function(){
     let winW = $(window).width();
-    let winH = $(window).height();
     if(winW > 768) {
       $('.header nav').css({
         'overflow-y': 'visible',
@@ -88,6 +58,19 @@ $(function() {
         'display': 'none',
         'opacity': 0
       });
+    }
+  });
+
+  // menu accrodion
+  $('.menu_listItemTitle').on('click touch', function(){
+    if($(this).hasClass('is-active')) {
+      $(this).removeClass('is-active');
+      $(this).next('ul').slideUp();
+      $(this).find('.accordion_icon').text('＋')
+    } else {
+      $(this).addClass('is-active');
+      $(this).next('ul').slideDown();
+      $(this).find('.accordion_icon').text('ー')
     }
   });
 });
